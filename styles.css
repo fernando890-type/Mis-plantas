@@ -1,0 +1,320 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7e0; /* color verdoso */
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    position: relative;
+    background-image: url('img/banner/plantas-fundo.webp'); /* Aquí pondrás la imagen de tus plantas */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-text h1 {
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro para el texto */
+    padding: 10px 20px;
+}
+
+.plantas {
+    padding: 20px;
+}
+
+.categoria {
+    margin-bottom: 40px;
+}
+
+.categoria h2 {
+    font-size: 2em;
+    color: #3b7a3e; /* Un verde más oscuro para los títulos */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.planta-item {
+    display: inline-block;
+    width: 45%;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+
+.planta-item h3 {
+    font-size: 1.5em;
+    color: #4c9c4f;
+    margin: 10px 0;
+}
+
+.planta-item p {
+    color: #555;
+    font-size: 1em;
+}
+
+.planta-item img {
+    width: 100%; /* Ocupa el 100% del ancho del contenedor */
+    height: 250px; /* Establece una altura fija */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin recortarse */
+    border-radius: 8px;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #25D366; /* Color verde de WhatsApp */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #128C7E; /* Color más oscuro al pasar el ratón */
+}
+
+/* Estilos para el menú de navegación */
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: #4CAF50; /* Un verde para el menú */
+    padding: 10px;
+}
+
+.menu-boton {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px 20px;
+    background-color: #3b7a3e;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-boton:hover {
+    background-color: #2e5b2f; /* Color más oscuro al pasar el ratón */
+}
+
+/* Estilos de sección */
+.plantas {
+    padding: 20px;
+}
+
+.menu {
+    background-color: #4CAF50; /* Color de fondo del menú */
+    padding: 10px;
+    text-align: center;
+    transition: all 0.3s ease; /* Suaviza la transición */
+}
+
+.menu.fijo {
+    position: fixed; /* Hace que el menú se "pegue" en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra para destacar */
+    z-index: 1000; /* Asegura que el menú quede en la capa superior */
+}
+
+/* Estilos para el acordeón */
+.acordeon-boton, .acordeon-subboton {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    text-align: left;
+    outline: none;
+    border: none;
+    width: 100%;
+    transition: background-color 0.2s ease;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.acordeon-boton:hover, .acordeon-subboton:hover {
+    background-color: #3A8D4B;
+}
+
+/* Contenido con animación */
+.acordeon-contenido, .acordeon-subcontenido {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    padding: 0 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color: #f9f9f9;
+}
+
+.acordeon-contenido.activo, .acordeon-subcontenido.activo {
+    opacity: 1;
+    padding: 10px;
+}
+
+.menu-boton.active {
+    font-weight: bold;
+    color: #054d00; /* Cambia a un color diferente para resaltar */
+}
+
+/* Estilos para el contenido del acordeón */
+.acordeon-subcontenido {
+    text-align: center;
+}
+
+/* Estilos para la lista de cuidados */
+.lista-cuidados {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto; /* Centra la lista en el contenedor */
+}
+
+.lista-cuidados li {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.lista-cuidados li strong {
+    font-weight: bold;
+    color: #4CAF50; /* Color verde para resaltar el título */
+}
+
+/* Estilos para el contenido del acordeón */
+.acordeon-subcontenido {
+    text-align: center;
+}
+
+/* Estilos para la lista de cuidados y características */
+.lista-cuidados, .lista-caracteristicas {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto; /* Centra la lista en el contenedor */
+}
+
+.lista-cuidados li, .lista-caracteristicas li {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.lista-cuidados li strong, .lista-caracteristicas li strong {
+    font-weight: bold;
+    color: #4CAF50; /* Color verde para resaltar el título */
+}
+
+
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Ajustes para el banner */
+    .banner {
+        height: 200px; /* Reduce la altura del banner */
+    }
+
+    .banner-text h1 {
+        font-size: 1.8em; /* Reduce el tamaño del texto en el banner */
+        padding: 8px 15px;
+    }
+
+    /* Estilo del menú para dispositivos móviles */
+    .menu {
+        display: flex;
+        justify-content: center; /* Centra el contenido del menú */
+        padding: 8px 0;
+        background-color: #4CAF50; /* Color de fondo */
+    }
+
+    .menu-boton {
+        font-size: 1em; /* Tamaño más pequeño para los botones */
+        padding: 5px 8px;
+        margin: 0 5px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .menu-boton:hover {
+        text-decoration: underline; /* Subraya el enlace al pasar el cursor (opcional) */
+    }
+
+    /* Ajustes para la sección de plantas */
+    .plantas {
+        padding: 10px; /* Reduce el espacio en los bordes */
+    }
+
+    .planta-item {
+        display: flex;
+        flex-direction: column; /* Coloca la imagen y el texto en una columna */
+        align-items: center;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .planta-item img {
+        width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+        height: auto; /* Mantiene la relación de aspecto */
+    }
+
+    .planta-item h3 {
+        font-size: 1.2em; /* Ajusta el tamaño del título */
+        margin-top: 10px;
+    }
+
+    .planta-item p {
+        font-size: 1em; /* Ajusta el tamaño de la descripción */
+        padding: 0 10px;
+    }
+
+    .boton {
+        font-size: 1em; /* Ajusta el tamaño del botón */
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .plantas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .planta-item {
+        width: 100%; /* Para que cada planta ocupe el ancho disponible */
+        max-width: 300px; /* Limita el ancho máximo de cada planta */
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .planta-item img {
+        width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+        border-radius: 10px; /* Bordes redondeados para un toque estilizado */
+    }
+
+    .planta-item h3, .planta-item p {
+        margin: 5px 0;
+    }
+
+    .boton {
+        font-size: 1em;
+        padding: 8px 15px;
+        margin-top: 10px;
+    }
+}
